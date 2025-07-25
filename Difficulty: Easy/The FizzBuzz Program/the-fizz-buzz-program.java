@@ -1,38 +1,27 @@
-// User function Template for Java
-class Solution 
-{
-    public static void fizzBuzz(int number)
-    {
-        if((number % 3 == 0) && (number % 5 == 0))
-        { 
-               String FB = "FizzBuzz";
-                System.out.println(FB);
-              
-        }
-       else if (number % 3 == 0)
-       {
-           String F ="Fizz";
-           System.out.println(F);
-         
+import java.util.*;
 
-           
-       }
-       else if(number % 5 == 0)
-       {
-           
-            String B="Buzz";
-            System.out.println(B);
-            
-       }
-       else
+public class Solution {
+    public static void main(String args[]) {
+        // Your Code Here
+        Scanner sc=new Scanner(System.in);
+        String result;
+        int a =sc.nextInt();
+        if(a % 3 == 0 && a%5 == 0)
         {
-            System.out.println(number);
+            result="FizzBuzz";
         }
-        
-     }
-    public static void main (String[] args)
-    {
-       
-        fizzBuzz(6);
+        else if( a % 5 == 0)
+        {
+            result= "Buzz";
+        }
+        else if(a% 3 == 0)
+        {
+            result="Fizz";
+        }
+        else
+        {
+            result= a +"";
+        }
+        System.out.println(result);
     }
 }
